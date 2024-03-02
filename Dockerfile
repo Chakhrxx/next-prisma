@@ -5,15 +5,13 @@ FROM node:19
 WORKDIR /app
 
 # Copy the package.json and pnpm-lock.yaml to the container
-COPY package.json pnpm-lock.yaml /app/
+COPY package.json pnpm-lock.yaml .env /prisma/schema.prisma /app/ 
 
 # Install pnpm globally
 RUN npm install -g pnpm
 
 # Install project dependencies using pnpm
-RUN pnpm install
-
-RUN pnpm prisma migrate dev --name migrateData  
+RUN pnpm install 
 
 # Copy the rest of the application code to the container
 COPY . /app
