@@ -5,7 +5,7 @@ FROM node:19
 WORKDIR /app
 
 # Copy the package.json and pnpm-lock.yaml to the container
-COPY package.json pnpm-lock.yaml .env /prisma/schema.prisma /app/ 
+COPY package.json pnpm-lock.yaml .env /prisma/ /app/ 
 
 # Install pnpm globally
 RUN npm install -g pnpm
