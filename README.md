@@ -182,3 +182,7 @@ Note: The environment variables for the PostgreSQL and PGAdmin services are set 
 # Dependencies
 
 This project requires Docker and Docker Compose to run. Make sure you have them installed on your machine before running the project.
+
+# Project Screenshot
+
+![Screenshot PGAdmin](https://raw.githubusercontent.com/Chakhrxx/next-prisma/main/app/images/Screenshot.png)
