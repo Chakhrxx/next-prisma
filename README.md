@@ -51,7 +51,7 @@ docker-compose up -d
    The Connection credentials are
 
    ```env
-   Name: postgres
+   Host name: postgres
    Username : myuser
    Password : mypassword
    ```
