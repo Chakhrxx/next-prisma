@@ -1,0 +1,42 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - features/*
+      - hotfixes/*
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.12.1
+
+      - name: Lint
+        run: |
+          pnpm exec eslint --ext .ts,.tsx,.js,.jsx . --fix
+          pnpm exec prettier --write '**/*.{js,jsx,ts,tsx,json,graphql,md}'
+
+      - name: Format commit message
+        uses: hades246/git-auto-commit-message@v1.1.0
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "chore: apply eslint and prettier fixes"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

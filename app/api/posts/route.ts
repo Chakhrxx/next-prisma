@@ -6,11 +6,11 @@ const prisma = new PrismaClient();
 
 export async function GET(req: NextRequest) {
   const searchParams = req.nextUrl.searchParams;
-  const category = searchParams.get("category");
-  const search = searchParams.get("search") || "";
-  const sort = searchParams.get("sort") || "desc";
+  const category = searchParams?.get("category");
+  const search = searchParams?.get("search") || "";
+  const sort = searchParams?.get("sort") || "desc";
 
-  const whereCondition = category
+  var whereCondition = category
     ? {
         category: { is: { name: category } },
         title: {
@@ -37,7 +37,7 @@ export async function GET(req: NextRequest) {
     });
     return Response.json(posts);
   } catch (error) {
-    return new Response(error, {
+    return Response.json(error, {
       status: 500,
     });
   }
