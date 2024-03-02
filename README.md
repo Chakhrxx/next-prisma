@@ -185,4 +185,4 @@ This project requires Docker and Docker Compose to run. Make sure you have them 
 
 # Project Screenshot
 
-![Screenshot PGAdmin](https://raw.githubusercontent.com/Chakhrxx/next-prisma/main/app/images/Screenshot.png)
+![Screenshot PGAdmin](https://raw.githubusercontent.com/Chakhrxx/next-prisma/main/app/images/screenshot.png)
