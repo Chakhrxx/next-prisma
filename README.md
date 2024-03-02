@@ -25,11 +25,13 @@ cd next-prisma
 3. Run docker-compose up to start the services.
 
 ```bash
-docker-compose up -D
+docker-compose up -d
 ```
 
 4. Access the Next.js app at http://localhost:3000.
 5. Access PGAdmin at http://localhost:5050. The default login credentials are admin@admin.com and root.
+
+![Project Image](https://github.com/your-username/your-repository/blob/main/path/to/image.png)
 
 ```env
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
