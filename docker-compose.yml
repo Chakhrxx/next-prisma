@@ -1,5 +1,17 @@
 version: "3.8"
 services:
+  nextjs:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      PGHOST: postgres
+      PGPORT: 5432
+      PGUSER: myuser
+      PGPASSWORD: mypassword
+      PGDATABASE: mydb
+    depends_on:
+      - postgres
   postgres:
     image: postgres:latest
     environment:
