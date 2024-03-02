@@ -29,14 +29,34 @@ docker-compose up -d
 ```
 
 4. Access the Next.js app at http://localhost:3000.
-5. Access PGAdmin at http://localhost:5050. The default login credentials are admin@admin.com and root.
+5. Access PGAdmin at http://localhost:5050.
 
-![Project Image](https://github.com/your-username/your-repository/blob/main/path/to/image.png)
+   The default login credentials are
 
-```env
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: root
-```
+   ```env
+   PGADMIN_DEFAULT_EMAIL: admin@admin.com
+   PGADMIN_DEFAULT_PASSWORD: root
+   ```
+
+   ![Login PGAdmin](https://raw.githubusercontent.com/Chakhrxx/next-prisma/main/app/images/loginPGAdmin.png)
+   Add New Sever
+   ![addNewServer PGAdmin](https://raw.githubusercontent.com/Chakhrxx/next-prisma/main/app/images/addNewServer.png)
+   The General credentials is
+
+   ```env
+   Name: test
+   ```
+
+   ![generalInfo PGAdmin](https://raw.githubusercontent.com/Chakhrxx/next-prisma/main/app/images/generalInfo.png)
+   The Connection credentials are
+
+   ```env
+   Name: postgres
+   Username : myuser
+   Password : mypassword
+   ```
+
+   ![connectionInfo PGAdmin](https://raw.githubusercontent.com/Chakhrxx/next-prisma/main/app/images/connectionInfo.png)
 
 # Environment Variables
 
@@ -59,3 +79,7 @@ Note: The environment variables for the PostgreSQL and PGAdmin services are set 
 # Dependencies
 
 This project requires Docker and Docker Compose to run. Make sure you have them installed on your machine before running the project.
+
+```
+
+```

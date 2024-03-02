@@ -13,6 +13,8 @@ RUN npm install -g pnpm
 # Install project dependencies using pnpm
 RUN pnpm install
 
+RUN pnpm prisma migrate dev --name migrateData  
+
 # Copy the rest of the application code to the container
 COPY . /app
 
