@@ -1,18 +1,19 @@
 version: "3.8"
 services:
+  # The Next.js service configuration
   nextjs:
     build: .
+    container_name: nextjs
     ports:
       - "3000:3000"
     environment:
-      PGHOST: postgres
-      PGPORT: 5432
-      PGUSER: myuser
-      PGPASSWORD: mypassword
-      PGDATABASE: mydb
-    depends_on:
+      # Environment variables for the service
+      DATABASE_URL: postgresql://myuser:mypassword@postgres:5432/mydb?schema=public
+    depends_on: # Services that must be started before this service
       - postgres
+  # The PostgreSQL service configuration
   postgres:
+    container_name: postgres
     image: postgres:latest
     environment:
       POSTGRES_USER: myuser
@@ -21,8 +22,10 @@ services:
     ports:
       - "5432:5432"
     volumes:
+      - ./postgres-data:/var/lib/postgresql/data
       - postgres-data:/var/lib/postgresql/data
   pgadmin:
+    container_name: pgadmin
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com

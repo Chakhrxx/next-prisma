@@ -1,6 +1,12 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@next/swc-linux-arm64-gnu':
+    specifier: ^14.1.0
+    version: 14.1.0
+  '@next/swc-linux-arm64-musl':
+    specifier: ^14.1.0
+    version: 14.1.0
   '@prisma/client':
     specifier: ^5.10.2
     version: 5.10.2(prisma@5.10.2)
@@ -120,6 +126,13 @@ packages:
     dev: false
     optional: true
 
+  /@next/swc-linux-arm64-gnu@14.1.0:
+    resolution: {integrity: sha512-RHo7Tcj+jllXUbK7xk2NyIDod3YcCPDZxj1WLIYxd709BQ7WuRYl3OWUNG+WUfqeQBds6kvZYlc42NJJTNi4tQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    dev: false
+
   /@next/swc-linux-arm64-gnu@14.1.1:
     resolution: {integrity: sha512-YDQfbWyW0JMKhJf/T4eyFr4b3tceTorQ5w2n7I0mNVTFOvu6CGEzfwT3RSAQGTi/FFMTFcuspPec/7dFHuP7Eg==}
     engines: {node: '>= 10'}
@@ -128,6 +141,13 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@next/swc-linux-arm64-musl@14.1.0:
+    resolution: {integrity: sha512-v6kP8sHYxjO8RwHmWMJSq7VZP2nYCkRVQ0qolh2l6xroe9QjbgV8siTbduED4u0hlk0+tjS6/Tuy4n5XCp+l6g==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    dev: false
 
   /@next/swc-linux-arm64-musl@14.1.1:
     resolution: {integrity: sha512-fiuN/OG6sNGRN/bRFxRvV5LyzLB8gaL8cbDH5o3mEiVwfcMzyE5T//ilMmaTrnA8HLMS6hoz4cHOu6Qcp9vxgQ==}
