@@ -21,7 +21,7 @@ RUN pnpm install
 COPY . .
 
 # Expose port 3000 for the NextJS application
-EXPOSE 3000
+EXPOSE 3000  
 
 # Start the application in development mode
 CMD ["pnpm", "run", "start:dev"]
