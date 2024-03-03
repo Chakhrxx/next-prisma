@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "next-prisma",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prisma-migrate-dev": "docker exec nextjs npx prisma migrate dev --name dataMigate",
-    "prisma-studio": "docker exec nextjs npx prisma studio"
+    "prisma-migrate-dev": "docker exec nextjs npx prisma migrate dev --name dataMigate"
   },
   "dependencies": {
     "@next/swc-linux-arm64-gnu": "^14.1.0",
