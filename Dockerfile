@@ -1,15 +1,13 @@
 # Use the official Node.js v19.x image as the base image
-FROM node:19
+FROM node:19 as develop
 
 # Set the working directory to /app
 WORKDIR /app
 
 # Copy the package.json and pnpm-lock.yaml to the container
-COPY package.json   /app/ 
-COPY pnpm-lock.yaml /app/ 
-COPY .  /app/ 
-# COPY /prisma/ /app/ 
-# COPY package.json pnpm-lock.yaml .env /prisma/ /app/ 
+COPY package.json   ./
+COPY pnpm-lock.yaml ./
+COPY .  ./
 
 # Install pnpm globally
 RUN npm install -g pnpm
